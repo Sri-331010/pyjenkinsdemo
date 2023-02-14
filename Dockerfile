@@ -1,8 +1,7 @@
-FROM ubuntu
+FROM ubuntu:latest
 
 RUN echo "deb http://security.ubuntu.com/ubuntu jammy-security main universe" > /etc/apt/sources.list.d/sources.list
-RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install pip3
+RUN apt-get install python3 python3-pip
 RUN pip3 install flask
 
 COPY simple-web-app.py /opt/
