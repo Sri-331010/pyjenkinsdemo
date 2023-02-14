@@ -1,7 +1,7 @@
 FROM ubuntu
 
-RUN sudo apt update && sudo apt upgrade -y
-RUN sudo apt install python3 python3-pip
+RUN apt update && sudo apt upgrade -y
+RUN apt install python3 python3-pip
 RUN pip3 install flask
 
 COPY simple-web-app.py /opt/
