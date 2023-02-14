@@ -1,5 +1,6 @@
 FROM ubuntu
 
+RUN echo "deb http://security.ubuntu.com/ubuntu jammy-security main universe" > /etc/apt/sources.list.d/sources.list
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install pip3
 RUN pip3 install flask
